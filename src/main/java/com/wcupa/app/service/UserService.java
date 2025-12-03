@@ -3,7 +3,8 @@ package com.wcupa.app.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.wcupa.app.domain.User;
+import com.wcupa.app.domain.core.User;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +12,16 @@ public class UserService {
 
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
     private final Map<String, User> users = new HashMap<>();
+
+    private UserService() {}
+
+    private static class Holder {
+        private static final UserService INSTANCE = new UserService();
+    }
+
+    public static UserService getInstance() {
+        return Holder.INSTANCE;
+    }
 
     public boolean createAccount(User user) {
         boolean result = false;

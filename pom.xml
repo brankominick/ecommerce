@@ -5,7 +5,7 @@
 
   <groupId>com.wcupa.app</groupId>
   <artifactId>eCommercePlatform</artifactId>
-  <version>0.1-MODULE-1</version>
+  <version>1.0</version>
 
   <name>eCommercePlatform</name>
   <url>https://github.com/brankominick/ecommerce</url>
@@ -33,22 +33,32 @@
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
     </dependency>
-    <!-- Optionally: parameterized tests support -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
+      <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.11.0</version>
+      <scope>test</scope>
+  </dependency>
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
         <version>2.0.0</version>
     </dependency>
     <dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-simple</artifactId>
-    <version>2.0.0</version>
-</dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.0</version>
+    </dependency>
     <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
@@ -56,10 +66,15 @@
         <scope>runtime</scope>
     </dependency>
     <dependency>
-    <groupId>org.swinglabs</groupId>
-    <artifactId>swingx</artifactId>
-    <version>1.6.1</version>
-</dependency>
+      <groupId>org.swinglabs</groupId>
+      <artifactId>swingx</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>8.4.0</version>
+    </dependency>
   </dependencies>
 
   <build>
